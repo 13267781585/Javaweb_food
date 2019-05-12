@@ -16,18 +16,18 @@ public class jdbcConnection{
 	private static String driverName = "com.mysql.jdbc.Driver";
 	private static String url = "jdbc:mysql://127.0.0.1:3306/test1?characterEncoding=utf-8";
 	private static String dbName = "root";
-	private static String dbPassword = "83642221.z";
+	private static String dbPassword = "123456";
 	
 	public jdbcConnection() 
 	{
 		try
 		{
 			Class.forName(driverName);
-			System.out.println("Çı¶¯¼ÓÔØ³É¹¦!");
+			System.out.println("é©±åŠ¨åŠ è½½æˆåŠŸ!");
 		}
 		catch(ClassNotFoundException  e)
 		{
-			System.out.println("Êı¾İ¿âÁ¬½Ó´íÎó1!");
+			System.out.println("æ•°æ®åº“è¿æ¥é”™è¯¯1!");
 			e.printStackTrace();
 			
 		}
@@ -35,24 +35,24 @@ public class jdbcConnection{
 		
 	}
 	
-	//»ñÈ¡Á¬½Ó
+	//è·å–è¿æ¥
 	public Connection getConnection()
 	{
 		try
 		{
 			conn = DriverManager.getConnection(url,dbName,dbPassword);
 
-			System.out.println("Êı¾İ¿âÁ¬½Ó³É¹¦!");
+			System.out.println("æ•°æ®åº“è¿æ¥æˆåŠŸ!");
 			
 		}
 		catch(SQLException e)
 		{
-			System.out.println("Êı¾İ¿âÁ¬½Ó´íÎó2!");
+			System.out.println("æ•°æ®åº“è¿æ¥é”™è¯¯2!");
 			e.printStackTrace();
 		}
 		if(conn==null)
 		{
-			System.out.println("Êı¾İ¿âÁ¬½ÓÎª¿Õ£¡");
+			System.out.println("æ•°æ®åº“è¿æ¥ä¸ºç©ºï¼");
 			System.exit(0);
 		}
 		
@@ -60,7 +60,7 @@ public class jdbcConnection{
 	}
 	
 	
-	 //¸üĞÂ
+	 //æ›´æ–°
 	public int executeUpdate(String sql)
 	{
 		int result = 0;
@@ -85,14 +85,14 @@ public class jdbcConnection{
 	
 	}
 	
-	//²éÑ¯Êı¾İ
+	//æŸ¥è¯¢æ•°æ®
 	public ResultSet executeQuery(String sql) 
 	{
 		try
 		{
 			conn = getConnection();
 			
-			sta = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY); //ÉèÖÃÎªÖ¸Õë¿ÉÏòÇ°ÏòºóÒÆ¶¯£¬ºÍÖ»¶Á 
+			sta = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY); //è®¾ç½®ä¸ºæŒ‡é’ˆå¯å‘å‰å‘åç§»åŠ¨ï¼Œå’Œåªè¯» 
 			
 		    set = sta.executeQuery(sql);
 		}
@@ -104,7 +104,7 @@ public class jdbcConnection{
 		
 		return set;
 	}
-		//¹Ø±ÕÁ¬½Ó
+		//å…³é—­è¿æ¥
 	public void close()
 	{
 		try
@@ -122,7 +122,7 @@ public class jdbcConnection{
 				conn.close();
 			}
 			
-			/*Enumeration<Driver> drivers = DriverManager.getDrivers();            //¹Ø±ÕÊı¾İ¿âµÄÇı¶¯£¬·ÀÖ¹ÄÚ´æĞ¹Â©
+			/*Enumeration<Driver> drivers = DriverManager.getDrivers();            //å…³é—­æ•°æ®åº“çš„é©±åŠ¨ï¼Œé˜²æ­¢å†…å­˜æ³„æ¼
 			
 			while(drivers.hasMoreElements())
 			{
@@ -137,7 +137,7 @@ public class jdbcConnection{
 		{
 			ex.printStackTrace(System.err);
 		}
-		System.out.println("Êı¾İ¿â¹Ø±Õ³É¹¦£¡");
+		System.out.println("æ•°æ®åº“å…³é—­æˆåŠŸï¼");
 		
 	}
 	
