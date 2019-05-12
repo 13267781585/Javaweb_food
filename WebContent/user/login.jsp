@@ -1,13 +1,16 @@
-<!doctype html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta charset="utf-8" />
-<link rel = "stylesheet" type = "text/css" href = "dengLu.css"/>
-<title>登录界面</title>
+<%@ taglib prefix = "c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel = "stylesheet" type = "text/css" href = "<c:url value = '/dengLu.css'/> " />
+<title>登录</title>
 </head>
 <body>
 <div id = "main">
-<form  action="filter.jsp?id=1" method="post">
+<form  action="<c:url value = '/LoginServlet' /> method="post">
   <table align="center">
   <tr>
       <td>用户名：</td>
@@ -18,7 +21,9 @@
        <td>密码：</td>
        <td><input type = "password" name = "password"></td>
    </tr>
-  
+  <tr>
+  <td>${loginMessage}</td>
+  </tr>
   <tr>
     <td><input type = "submit" value = "登录"></td>
     <td><input type = "reset" value = "重置"></td>
@@ -29,5 +34,4 @@
 </div>
 
 </body>
-
 </html>

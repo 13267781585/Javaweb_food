@@ -1,6 +1,6 @@
-package com.code;
+package com.code.user.doamin;
 
-public class Message 
+public class Comment 
 {
 	private String name;
 	private String day;

@@ -1,17 +1,19 @@
-package com.code;
+package com.code.user.doamin;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.code.user.dao.jdbcConnection;
+
 
  //针对不同的子页面，不同的数据表如何处理
 
-public class MessageSum 
+public class CommentSum 
 {
 	private String table_name;
-	private Message message;
+	private Comment comment;
 	private jdbcConnection conn = new jdbcConnection();
 	
 	public void setTable_name(String table_name)
@@ -24,22 +26,22 @@ public class MessageSum
 		return this.table_name;
 	}
 	
-	public void setMessage(Message message)
+	public void setMessage(Comment comment)
 	{
-		this.message = message;
+		this.comment = comment;
 	}
 	
-	public Message getMessage()
+	public Comment getMessage()
 	{
-		return this.message;
+		return this.comment;
 	}
 	
 	//设置message和更新数据库操作
-	public void addMessage(Message message)
+	public void addMessage(Comment comment)
 	{
-		this.setMessage(message);
+		this.setMessage(comment);
 		
-		String sql = "insert into " + table_name + " values('" + message.getName() + "',now(),'" + message.getContent() + "');";
+		String sql = "insert into " + table_name + " values('" + comment.getName() + "',now(),'" + comment.getContent() + "');";
 		
 		System.out.println(sql);
 		
@@ -57,9 +59,9 @@ public class MessageSum
 	
 	
 	//搜索数据库的数据，返回一个集合
-	public Collection<Message> getMessages()
+	public Collection<Comment> getMessages()
 	{
-		Collection<Message> set = new  ArrayList<Message>();
+		Collection<Comment> set = new  ArrayList<Comment>();
 		String sql = "select * from " + table_name + " order by 日期 desc;";
 		
 		System.out.println(sql);
@@ -72,7 +74,7 @@ public class MessageSum
 			{
 			while(result.next())
 			{
-				Message tempt = new Message();
+				Comment tempt = new Comment();
 				
 				tempt.setName(result.getString("用户名"));
 				tempt.setDay(result.getString("日期"));

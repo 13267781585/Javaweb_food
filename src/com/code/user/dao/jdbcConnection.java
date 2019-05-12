@@ -1,4 +1,4 @@
-package com.code;
+package com.code.user.dao;
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -16,7 +16,7 @@ public class jdbcConnection{
 	private static String driverName = "com.mysql.jdbc.Driver";
 	private static String url = "jdbc:mysql://127.0.0.1:3306/test1?characterEncoding=utf-8";
 	private static String dbName = "root";
-	private static String dbPassword = "83642221.z";
+	private static String dbPassword = "123456";
 	
 	public jdbcConnection() 
 	{

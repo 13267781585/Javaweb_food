@@ -2,10 +2,10 @@
 <html>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<%@ page import = "java.util.*,com.code.Message" %>
+<%@ page import = "java.util.*,com.code.user.doamin.Comment" %>
 
 <%
-   request.setCharacterEncoding("utf-8");
+	request.setCharacterEncoding("utf-8");
    response.setCharacterEncoding("utf-8");
    
    String isLogin = (String)application.getAttribute("isLogin");
@@ -30,11 +30,11 @@
    }
 %>
 
-<jsp:useBean id = "message" class = "com.code.Message" scope = "page">
+<jsp:useBean id = "message" class = "com.code.user.doamin.Comment" scope = "page">
 <jsp:setProperty name = "message" property = "*"/>
 </jsp:useBean>
 
-<jsp:useBean id = "messageSum" class = "com.code.MessageSum" scope = "page"/>
+<jsp:useBean id = "messageSum" class = "com.code.user.doamin.CommentSum" scope = "page"/>
 
 <link rel = "stylesheet" type = "text/css" href = "comment.css"/>
 <head>
@@ -64,8 +64,8 @@
 </div>
 
 <div>
-<% 
-   String table_name1 = (String)application.getAttribute("table_name");
+<%
+	String table_name1 = (String)application.getAttribute("table_name");
    String content = (String)request.getParameter("content");
    String name = (String)application.getAttribute("name");
    
@@ -89,13 +89,12 @@
 
    }
   
-   Collection<Message> messages = messageSum.getMessages();
-   Iterator<Message> it = messages.iterator();
+   Collection<Comment> messages = messageSum.getMessages();
+   Iterator<Comment> it = messages.iterator();
    
    while(it.hasNext())
    {
-	   Message tempt = (Message)it.next();
-  
+	   Comment tempt = (Comment)it.next();
 %>
 
 <table>
