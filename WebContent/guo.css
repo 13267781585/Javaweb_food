@@ -1,0 +1,178 @@
+*{
+	border:0px;
+	margin:0px;
+	
+}
+body{
+	background: url('image/background-guo.jpg') no-repeat fixed;
+	background-size:100% 100%;
+	width:100%;
+	height:100%;
+	font-family:Arial,Times New Roman,微软雅黑;
+	font-size:25px;
+	font-weight:2px;
+	zoom: 1.2;
+	z-index:3;
+}
+.nav { 
+	position:absolute;
+	border:0px;
+    top:1%;
+    left:23%;
+    z-index:0;
+    }
+
+.nav image{
+	float:left;
+	width:7%;
+	height: 62px;
+	border:0px;
+	margin:0px;
+}
+
+ul, li { 
+	list-style:none;
+	float:left;
+	}
+
+a { text-decoration:none;}
+
+.nav ul li a { 
+	padding:10px 0px 10px 15px;
+	width:168px; 
+	height:35px; 
+	text-align:center;
+	color:white;
+	display:block; 
+	border-right:2px solid #c0c0c0;
+	background:#FF5A00;
+	}
+
+.nav ul li ul { 
+	position:absolute;
+	left:427px;
+	display:none;
+}
+
+.nav ul li ul li{ 
+	float:none;
+	}
+
+.nav ul li ul li a { 
+	border-right:none; 
+	border-top:1px dotted #333333;
+    background:#FF5A00;
+    }
+
+.nav ul li:hover ul{ 
+	display:block; 
+	}
+
+.nav ul li a:hover{
+	color:white;
+	background: #00ffda;
+}
+
+.main{
+	position:absolute;
+	width:1115px;
+	height:1850px;
+	left:-100px;
+	top:121px;
+	border:1px soild #333333;
+	background-color: #e8eaff;
+	z-index:-1;
+}
+
+.nav1{
+	width:98.5%;
+	height:2.2%;
+	padding-left:15px;
+	padding-top:10px;
+	background-color:#e8eaff;
+	color:white;
+	float:left;
+	
+}
+.nav1 span {
+	color: black;
+}
+.nav1 a{
+	font-size: 18px;
+}
+.text1{
+	margin:0px;
+	padding:15px 25px 15px 25px;
+	font-family:Arial,Times New Roman;
+    height:100%;
+	background-color: #fffde8;
+}
+
+ h1 {
+	 text-align: center;
+	 font-family:Arial,Times New Roman,微软雅黑;
+ }
+
+#img1{
+	position: absolute;
+	width: 100%;
+	height: 20%;
+}
+
+#img1 img{
+	text-align:center;
+	width:24%;
+	height: 60%;
+	float: left;
+	padding: 2% 2% 3% 3%;
+}
+
+#text {
+	position: absolute;
+	width: 100%;
+	height: 12%;
+	font-size: 20px;
+	top: 25%;
+	text-align:center;
+	z-index:3;
+}
+
+#mainbody {
+	position:absolute;
+	width: 100%;
+	left: 0%;
+	top: 26%;margin:0px;
+	padding:15px 25px 15px 25px;
+	height:100%;
+	font-family: 楷体,Arial,Times New Roman,微软雅黑;
+}
+
+#mainbody h2 {
+	float: left;
+	font-weight: bold;
+	color: #FF0000;
+	font-family: Arial,Times New Roman,微软雅黑;
+}
+
+#mainbody img {
+	width:280px;	
+	height:235px;
+	margin:25px  50px ;
+	float: right;
+}
+
+#last{
+	position:absolute;
+	width:20%;
+	height:50%;
+	left:75%;
+	top:68.5%;
+	
+}
+
+#last img{
+	width:60px;
+	height:60px;
+	
+}
+
