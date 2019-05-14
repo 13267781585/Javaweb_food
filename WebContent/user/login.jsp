@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id = "main">
-<form  action="<c:url value = '/LoginServlet' /> method="post">
+<form  action="<c:url value = '/LoginServlet' /> "  method="post">
   <table align="center">
   <tr>
       <td>用户名：</td>

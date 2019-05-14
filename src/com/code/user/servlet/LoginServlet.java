@@ -34,13 +34,16 @@ public class LoginServlet extends HttpServlet {
 		
 		request.getSession().setAttribute("loginMessage",message);
 		
-		if(message.equals("µÇÂ¼³É¹¦!"))
+		if(message.equals("ç™»å½•æˆåŠŸ!"))
 		{
 			request.getSession().setAttribute("user",user);
-			request.getRequestDispatcher("/zhuYe.html").forward(request,response);
+			//request.getRequestDispatcher("/zhuYe.html").forward(request,response);
+			response.sendRedirect("zhuYe.html");
 		}
 		else
-			request.getRequestDispatcher("/dengLu.html").forward(request,response);
+			//request.getRequestDispatcher("login.jsp").forward(request,response);
+			response.sendRedirect("user/login.jsp");
+			
 		
 	}
 

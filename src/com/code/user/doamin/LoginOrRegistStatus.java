@@ -2,13 +2,13 @@ package com.code.user.doamin;
 
 
 /*
- * ÓÃsignÖ¸Ê¾µÇÂ¼×¢²áµÄ×´Ì¬
- * 0.Ã»ÓĞ¸ÃÓÃ»§
- * 1.ÃÜÂë´íÎó
- * 2.µÇÂ¼³É¹¦
- * 3.¸ÃÓÃ»§ÒÑ±»×¢²á
- * 4.×¢²áÊ§°Ü
- * 5.×¢²á³É¹¦
+ * ç”¨signæŒ‡ç¤ºç™»å½•æ³¨å†Œçš„çŠ¶æ€
+ * 0.æ²¡æœ‰è¯¥ç”¨æˆ·
+ * 1.å¯†ç é”™è¯¯
+ * 2.ç™»å½•æˆåŠŸ
+ * 3.è¯¥ç”¨æˆ·å·²è¢«æ³¨å†Œ
+ * 4.æ³¨å†Œå¤±è´¥
+ * 5.æ³¨å†ŒæˆåŠŸ
  */
 
 public class LoginOrRegistStatus {
@@ -17,12 +17,12 @@ public class LoginOrRegistStatus {
 	public static String getMessage(int mes) {
 		switch(mes)
 		{
-		case 0:{message = "Ã»ÓĞ¸ÃÓÃ»§!";break;}
-		case 1:{message = "ÃÜÂë´íÎó!";break;}
-		case 2:{message = "µÇÂ¼³É¹¦!";break;}
-		case 3:{message = "¸ÃÓÃ»§ÒÑ±»×¢²á!";break;}
-		case 4:{message = "×¢²áÊ§°Ü!";break;}
-		case 5:{message = "×¢²á³É¹¦!";break;}
+		case 0:{message = "æ²¡æœ‰è¯¥ç”¨æˆ·!";break;}
+		case 1:{message = "å¯†ç é”™è¯¯!";break;}
+		case 2:{message = "ç™»å½•æˆåŠŸ!";break;}
+		case 3:{message = "è¯¥ç”¨æˆ·å·²è¢«æ³¨å†Œ!";break;}
+		case 4:{message = "æ³¨å†Œå¤±è´¥!";break;}
+		case 5:{message = "æ³¨å†ŒæˆåŠŸ!";break;}
 		
 		}
 		

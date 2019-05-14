@@ -8,7 +8,7 @@ import java.util.Collection;
 import com.code.user.dao.jdbcConnection;
 
 
- //Õë¶Ô²»Í¬µÄ×ÓÒ³Ãæ£¬²»Í¬µÄÊı¾İ±íÈçºÎ´¦Àí
+ //é’ˆå¯¹ä¸åŒçš„å­é¡µé¢ï¼Œä¸åŒçš„æ•°æ®è¡¨å¦‚ä½•å¤„ç†
 
 public class CommentSum 
 {
@@ -36,7 +36,7 @@ public class CommentSum
 		return this.comment;
 	}
 	
-	//ÉèÖÃmessageºÍ¸üĞÂÊı¾İ¿â²Ù×÷
+	//è®¾ç½®messageå’Œæ›´æ–°æ•°æ®åº“æ“ä½œ
 	public void addMessage(Comment comment)
 	{
 		this.setMessage(comment);
@@ -47,22 +47,22 @@ public class CommentSum
 		
 		if(conn.executeUpdate(sql)==1)
 		{
-			System.out.println("Êı¾İ¿â²åÈëÆÀÂÛ³É¹¦!");
+			System.out.println("æ•°æ®åº“æ’å…¥è¯„è®ºæˆåŠŸ!");
 		}
 		else
 		{
-			System.out.println("Êı¾İ¿â²åÈëÊı¾İÊ§°Ü!");
+			System.out.println("æ•°æ®åº“æ’å…¥æ•°æ®å¤±è´¥!");
 		}
 		
 		
 	}
 	
 	
-	//ËÑË÷Êı¾İ¿âµÄÊı¾İ£¬·µ»ØÒ»¸ö¼¯ºÏ
+	//æœç´¢æ•°æ®åº“çš„æ•°æ®ï¼Œè¿”å›ä¸€ä¸ªé›†åˆ
 	public Collection<Comment> getMessages()
 	{
 		Collection<Comment> set = new  ArrayList<Comment>();
-		String sql = "select * from " + table_name + " order by ÈÕÆÚ desc;";
+		String sql = "select * from " + table_name + " order by æ—¥æœŸ desc;";
 		
 		System.out.println(sql);
 		
@@ -76,16 +76,16 @@ public class CommentSum
 			{
 				Comment tempt = new Comment();
 				
-				tempt.setName(result.getString("ÓÃ»§Ãû"));
-				tempt.setDay(result.getString("ÈÕÆÚ"));
-				tempt.setContent(result.getString("ÆÀÂÛ"));
+				tempt.setName(result.getString("ç”¨æˆ·å"));
+				tempt.setDay(result.getString("æ—¥æœŸ"));
+				tempt.setContent(result.getString("è¯„è®º"));
 				
 				set.add(tempt);
 				
 			}
 			}
 		} catch (SQLException e) {
-			// TODO ×Ô¶¯Éú³ÉµÄ catch ¿é
+			// TODO è‡ªåŠ¨ç”Ÿæˆçš„ catch å—
 			e.printStackTrace();
 		}
 		

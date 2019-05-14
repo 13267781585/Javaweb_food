@@ -7,18 +7,19 @@ import com.code.user.doamin.User;
 public class UserDao {
 	private jdbcConnection conn = new jdbcConnection();
 	
-	//²éÕÒÊÇ·ñ´æÔÚ¸ÃÓÃ»§£¬ÓĞ·µ»Ø¸ÃÓÃ»§ĞÅÏ¢£¬Ã»ÓĞÔò·µ»Ønull
+	//æŸ¥æ‰¾æ˜¯å¦å­˜åœ¨è¯¥ç”¨æˆ·ï¼Œæœ‰è¿”å›è¯¥ç”¨æˆ·ä¿¡æ¯ï¼Œæ²¡æœ‰åˆ™è¿”å›null
 	
 	public User findUser(String name) {
-		String sql = "select * from food_person_information where ÓÃ»§Ãû = '"+name+"';";
+		String sql = "select * from food_person_information where ç”¨æˆ·å = '"+name+"';";
 		System.out.println(sql);
 		
 		ResultSet set = conn.executeQuery(sql);
+		if(set!=null) {
 		try {
 			if(set.next()) {
 				User tempt = new User();
 				tempt.setName(name);
-				tempt.setPassword(set.getString("ÃÜÂë"));
+				tempt.setPassword(set.getString("å¯†ç "));
 				
 				conn.close();
 				
@@ -28,6 +29,9 @@ public class UserDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		}
+		else
+			System.out.println("setä¸ºnull!");
 		
 		conn.close();
 		
@@ -35,7 +39,7 @@ public class UserDao {
 		
 	}
 	
-	//Ìí¼ÓÓÃ»§
+	//æ·»åŠ ç”¨æˆ·
 	public boolean add(User user)
 	{
 		String name = user.getName();

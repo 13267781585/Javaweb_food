@@ -8,21 +8,21 @@ public class UserService {
 	private int sign = 0;
 	
 	/*
-	 * ÓÃsignÖ¸Ê¾µÇÂ¼×¢²áµÄ×´Ì¬
-	 * 0.Ã»ÓĞ¸ÃÓÃ»§
-	 * 1.ÃÜÂë´íÎó
-	 * 2.µÇÂ¼³É¹¦
-	 * 3.¸ÃÓÃ»§ÒÑ±»×¢²á
-	 * 4.×¢²áÊ§°Ü
-	 * 5.×¢²á³É¹¦
+	 * ç”¨signæŒ‡ç¤ºç™»å½•æ³¨å†Œçš„çŠ¶æ€
+	 * 0.æ²¡æœ‰è¯¥ç”¨æˆ·
+	 * 1.å¯†ç é”™è¯¯
+	 * 2.ç™»å½•æˆåŠŸ
+	 * 3.è¯¥ç”¨æˆ·å·²è¢«æ³¨å†Œ
+	 * 4.æ³¨å†Œå¤±è´¥
+	 * 5.æ³¨å†ŒæˆåŠŸ
 	 */
 	
-	//µÇÂ¼ÑéÖ¤
+	//ç™»å½•éªŒè¯
 	public int login(User loginUser)
 	{
 		User user = userDao.findUser(loginUser.getName());
 		
-		if(user!=null) {
+		if(user!=null&&loginUser!=null) {
 			if(loginUser.getPassword().equals(user.getPassword()))
 				sign = 2;
 			else
@@ -35,7 +35,7 @@ public class UserService {
 		return sign;
 	}
 	
-	//×¢²áÑéÖ¤
+	//æ³¨å†ŒéªŒè¯
 	
 	public int regist(User registUser)
 	{

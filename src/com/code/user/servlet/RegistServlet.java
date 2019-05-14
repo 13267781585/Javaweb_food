@@ -31,13 +31,15 @@ public class RegistServlet extends HttpServlet {
 		String message = LoginOrRegistStatus.getMessage(sign);
 		request.getSession().setAttribute("registMessage", message);
 		
-		if(message.equals("ע��ɹ�!"))
+		if(message.equals("注册成功!"))
 		{
 			request.getSession().setAttribute("uesr", user);
-			request.getRequestDispatcher("/zhuYe.html").forward(request,response);
+			//request.getRequestDispatcher("/zhuYe.html").forward(request,response);
+			response.sendRedirect("zhuYe.html");
 		}
 		else 
-			request.getRequestDispatcher("/zhuCe.html").forward(request, response);
+			//request.getRequestDispatcher("/zhuCe.html").forward(request, response);
+			response.sendRedirect("zhuCe.html");
 
 	}
 
