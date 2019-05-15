@@ -39,7 +39,7 @@ public class RegistServlet extends HttpServlet {
 		}
 		else 
 			//request.getRequestDispatcher("/zhuCe.html").forward(request, response);
-			response.sendRedirect("zhuCe.html");
+			response.sendRedirect("user/regist.jsp");
 
 	}
 

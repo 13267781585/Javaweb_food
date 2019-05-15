@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id = "main">
-<form action="<url: value = '/RegistServlet' />"  method="post">
+<form action="<c:url value = '/RegistServlet' />"  method="post">
   <table align="center">
     <tr>
      <td>用户名:</td>
@@ -27,7 +27,7 @@
     <tr>
      <td><input type="submit" value="提交"></td>
      <td><input type="reset"  value="重置"></td>
-     <td><a href="dengLu.html">已有账号!返回登录?</a></td>
+     <td><a href="<c:url value='/user/login.jsp' />" >已有账号!返回登录?</a></td>
     </tr> 
   </table>
 

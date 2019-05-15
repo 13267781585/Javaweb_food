@@ -27,7 +27,7 @@
   <tr>
     <td><input type = "submit" value = "登录"></td>
     <td><input type = "reset" value = "重置"></td>
-    <td><a href="zhuCe.html">无账号？注册!</a>
+    <td><a href= "<c:url value='/user/regist.jsp' />" >无账号？注册!</a>
   </tr>
   </table>
 </form>
