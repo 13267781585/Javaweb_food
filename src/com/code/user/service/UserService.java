@@ -1,6 +1,10 @@
 package com.code.user.service;
 
+import java.sql.ResultSet;
+import java.util.Vector;
+
 import com.code.user.dao.UserDao;
+import com.code.user.doamin.Comment;
 import com.code.user.doamin.User;
 
 public class UserService {
@@ -47,7 +51,7 @@ public class UserService {
 		}
 		else {
 			
-			if(userDao.add(registUser))
+			if(userDao.addUser(registUser))
 			{
 				sign = 4;
 				
@@ -57,5 +61,7 @@ public class UserService {
 		}
 		return sign;
 	}
+	
+	
 
 }

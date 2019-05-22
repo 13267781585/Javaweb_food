@@ -1,7 +1,9 @@
 package com.code.user.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Vector;
 
+import com.code.user.doamin.Comment;
 import com.code.user.doamin.User;
 
 public class UserDao {
@@ -40,7 +42,7 @@ public class UserDao {
 	}
 	
 	//添加用户
-	public boolean add(User user)
+	public boolean addUser(User user)
 	{
 		String name = user.getName();
 		String password = user.getPassword();
@@ -58,5 +60,6 @@ public class UserDao {
 		return false;
 		
 	}
-
+	
+	
 }
