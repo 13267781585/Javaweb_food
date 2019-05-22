@@ -4,7 +4,7 @@
 	
 }
 body{
-	background: url('image/backgroundtea.jpg') no-repeat fixed;
+	background: url('../image/background-guo.jpg') no-repeat fixed;
 	background-size:100% 100%;
 	width:100%;
 	height:100%;
@@ -52,7 +52,7 @@ a { text-decoration:none;}
 	position:absolute;
 	left:427px;
 	display:none;
-	}
+}
 
 .nav ul li ul li{ 
 	float:none;
@@ -76,7 +76,7 @@ a { text-decoration:none;}
 .main{
 	position:absolute;
 	width:1115px;
-	height:2600px;
+	height:1850px;
 	left:-100px;
 	top:121px;
 	border:1px soild #333333;
@@ -86,10 +86,10 @@ a { text-decoration:none;}
 
 .nav1{
 	width:98.5%;
-	height:1.9%;
+	height:2.2%;
 	padding-left:15px;
 	padding-top:10px;
-	background-color:#a3f7e0;
+	background-color:#e8eaff;
 	color:white;
 	float:left;
 	
@@ -105,7 +105,7 @@ a { text-decoration:none;}
 	padding:15px 25px 15px 25px;
 	font-family:Arial,Times New Roman;
     height:100%;
-	background-color: #7296f3;color: white;
+	background-color: #fffde8;
 }
 
  h1 {
@@ -114,22 +114,25 @@ a { text-decoration:none;}
  }
 
 #img1{
-	width:70%;
-	left: 15%;
+	position: absolute;
+	width: 100%;
+	height: 20%;
 }
 
 #img1 img{
 	text-align:center;
-	width:70%;
-	padding: 1% 1% 1.5% 1.5%;
+	width:24%;
+	height: 60%;
+	float: left;
+	padding: 2% 2% 3% 3%;
 }
-.
+
 #text {
 	position: absolute;
 	width: 100%;
 	height: 12%;
 	font-size: 20px;
-	top: 22.4%;
+	top: 25%;
 	text-align:center;
 	z-index:3;
 }
@@ -138,7 +141,7 @@ a { text-decoration:none;}
 	position:absolute;
 	width: 100%;
 	left: 0%;
-	top: 8%;margin:0px;
+	top: 26%;margin:0px;
 	padding:15px 25px 15px 25px;
 	height:100%;
 	font-family: 楷体,Arial,Times New Roman,微软雅黑;
@@ -147,19 +150,15 @@ a { text-decoration:none;}
 #mainbody h2 {
 	float: left;
 	font-weight: bold;
-	color: /*#FF0000;*/#a3f7e0;
+	color: #FF0000;
 	font-family: Arial,Times New Roman,微软雅黑;
 }
 
 #mainbody img {
 	width:280px;	
 	height:235px;
-	margin:25px 30px;
+	margin:25px  50px ;
 	float: right;
-}
-#simplediv {
-	width: 98%;
-	overflow:hidden;
 }
 
 #last{
@@ -167,7 +166,7 @@ a { text-decoration:none;}
 	width:20%;
 	height:50%;
 	left:75%;
-	top:88%;
+	top:68.5%;
 	
 }
 
@@ -176,5 +175,4 @@ a { text-decoration:none;}
 	height:60px;
 	
 }
-
 

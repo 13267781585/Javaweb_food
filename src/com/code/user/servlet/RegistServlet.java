@@ -35,7 +35,7 @@ public class RegistServlet extends HttpServlet {
 		{
 			request.getSession().setAttribute("uesr", user);
 			//request.getRequestDispatcher("/zhuYe.html").forward(request,response);
-			response.sendRedirect("zhuYe.html");
+			response.sendRedirect("static/zhuYe.html");
 		}
 		else 
 			//request.getRequestDispatcher("/zhuCe.html").forward(request, response);
