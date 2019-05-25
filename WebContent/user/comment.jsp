@@ -15,10 +15,12 @@
 <body>
 
 <div >
-   <a href = "<%=(String)application.getAttribute("history")%>" >返回</a>
+   <a href = "<c:url value="" />">返回</a>
 </div>
 <div class = "">
-<form action = "<c:url value='/addCommentServlet' />"  method = "post">
+<form action = "<c:url value='/addCommentServlet'>
+                 <c:param name = 'table_name'>${param.table_name}</c:param>
+                </c:url>"  method = "post">
  <table align = "center">
    <tr>
      <td>用户名：${SessionScope.name}</td>
@@ -37,7 +39,11 @@
  </table>
 </form>
 </div>
-
+  <c:forEach var="item" items="${SessionScope.comments}" >
+     <tr><td><c:out value = "${item.name}"/>
+             <c:out value = "${item.day }"/></td></tr>
+         <tr><td><c:out value = "${item.content }"/><td></td>
+  </c:forEach>
 <div>
 
 </div>

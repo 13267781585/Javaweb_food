@@ -40,8 +40,6 @@ public class CommentDao {
 				
 				ResultSet set = conn.executeQuery(sql);
 				
-				conn.close();
-				
 				if(set!=null)
 				{
 					Vector<Comment> vector = new Vector<Comment>();
@@ -67,7 +65,7 @@ public class CommentDao {
 						
 						e.printStackTrace();
 					}
-					
+					conn.close();
 					return vector;
 				}
 				else

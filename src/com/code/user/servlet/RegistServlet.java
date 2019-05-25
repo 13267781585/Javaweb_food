@@ -42,5 +42,9 @@ public class RegistServlet extends HttpServlet {
 			response.sendRedirect("user/regist.jsp");
 
 	}
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request,response);
+	}
 
 }
