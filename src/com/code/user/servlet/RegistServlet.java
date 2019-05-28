@@ -33,7 +33,7 @@ public class RegistServlet extends HttpServlet {
 		
 		if(message.equals("注册成功!"))
 		{
-			request.getSession().setAttribute("uesr", user);
+			request.getSession().setAttribute("uesrname", user.getName());
 			//request.getRequestDispatcher("/zhuYe.html").forward(request,response);
 			response.sendRedirect("static/zhuYe.html");
 		}

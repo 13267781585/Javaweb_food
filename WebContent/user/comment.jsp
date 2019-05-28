@@ -8,22 +8,23 @@
 
 <jsp:useBean id = "now" class = "java.util.Date"/>
 
-<link rel = "stylesheet" type = "text/css" href = "comment.css"/>
+<link rel = "stylesheet" type = "text/css" href = "<c:url value="/css/comment.css"/>"/>
 <head>
 <title>评论</title>
 </head>
 <body>
 
 <div >
-   <a href = "<c:url value="" />">返回</a>
+   <a href = "<c:url value="/static/${param.history }" />">返回</a>
 </div>
 <div class = "">
-<form action = "<c:url value='/addCommentServlet'>
+<form action = "<c:url value='/CommentServlet'>
                  <c:param name = 'table_name'>${param.table_name}</c:param>
+                 <c:param name='method'>add</c:param>
                 </c:url>"  method = "post">
  <table align = "center">
    <tr>
-     <td>用户名：${SessionScope.name}</td>
+     <td>用户名：${sessionScope.user.name}</td>
    </tr>
    <tr>
      <td>评论：</td>
@@ -39,10 +40,11 @@
  </table>
 </form>
 </div>
-  <c:forEach var="item" items="${SessionScope.comments}" >
-     <tr><td><c:out value = "${item.name}"/>
-             <c:out value = "${item.day }"/></td></tr>
-         <tr><td><c:out value = "${item.content }"/><td></td>
+  <c:forEach var="item" items="${requestScope.comments}" >
+     <tr><td><c:out value="${item.name}"/>
+             <c:out value="${item.day}"/><br/></td></tr>
+         <tr><td><c:out value="${item.content}"/><td></tr>
+         <br/><hr/>
   </c:forEach>
 <div>
 

@@ -36,13 +36,15 @@ public class LoginServlet extends HttpServlet {
 		
 		if(message.equals("登录成功!"))
 		{
-			request.getSession().setAttribute("user",user);
-			//request.getRequestDispatcher("/zhuYe.html").forward(request,response);
+			request.getSession().setAttribute("username",user.getName());
+			//request.getRequestDispatcher("/static/zhuYe.html").forward(request,response);
 			response.sendRedirect("static/zhuYe.html");
+			
 		}
 		else
-			//request.getRequestDispatcher("login.jsp").forward(request,response);
-			response.sendRedirect("user/login.jsp");
+			request.getRequestDispatcher("/user/login.jsp").forward(request,response);
+			//response.sendRedirect("user/login.jsp");
+		
 			
 		
 	}
